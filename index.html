@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adithya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circuit-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+            background-color: rgba(37, 37, 37, 0.95);
+            border: 1px solid #3a3a3a;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid #3a3a3a;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-photo-placeholder {
+            font-size: 3rem;
+            color: #4a4a4a;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #b0b0b0;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #3a3a3a;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background-color: #2a2a2a;
+        }
+
+        .social-link:hover {
+            background-color: #3a3a3a;
+            border-color: #4a4a4a;
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: #e0e0e0;
+        }
+
+        .social-link:hover svg {
+            fill: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .social-link {
+                width: 45px;
+                height: 45px;
+            }
+
+            .social-link svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Crystal Lattice Background -->
+    <svg class="circuit-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <style>
+                .lattice-line { stroke: #3a3a3a; stroke-width: 1; fill: none; }
+                .lattice-node { fill: #4a4a4a; }
+            </style>
+        </defs>
+
+        <!-- Crystal Lattice Pattern - Hexagonal Structure -->
+        <!-- Row 1 -->
+        <polygon class="lattice-line" points="150,100 225,140 225,220 150,260 75,220 75,140"/>
+        <polygon class="lattice-line" points="300,100 375,140 375,220 300,260 225,220 225,140"/>
+        <polygon class="lattice-line" points="450,100 525,140 525,220 450,260 375,220 375,140"/>
+        <polygon class="lattice-line" points="600,100 675,140 675,220 600,260 525,220 525,140"/>
+        <polygon class="lattice-line" points="750,100 825,140 825,220 750,260 675,220 675,140"/>
+        <polygon class="lattice-line" points="900,100 975,140 975,220 900,260 825,220 825,140"/>
+        <polygon class="lattice-line" points="1050,100 1125,140 1125,220 1050,260 975,220 975,140"/>
+        <polygon class="lattice-line" points="1200,100 1275,140 1275,220 1200,260 1125,220 1125,140"/>
+        <polygon class="lattice-line" points="1350,100 1425,140 1425,220 1350,260 1275,220 1275,140"/>
+        <polygon class="lattice-line" points="1500,100 1575,140 1575,220 1500,260 1425,220 1425,140"/>
+        <polygon class="lattice-line" points="1650,100 1725,140 1725,220 1650,260 1575,220 1575,140"/>
+        <polygon class="lattice-line" points="1800,100 1875,140 1875,220 1800,260 1725,220 1725,140"/>
+
+        <!-- Row 2 -->
+        <polygon class="lattice-line" points="150,300 225,340 225,420 150,460 75,420 75,340"/>
+        <polygon class="lattice-line" points="300,300 375,340 375,420 300,460 225,420 225,340"/>
+        <polygon class="lattice-line" points="450,300 525,340 525,420 450,460 375,420 375,340"/>
+        <polygon class="lattice-line" points="600,300 675,340 675,420 600,460 525,420 525,340"/>
+        <polygon class="lattice-line" points="750,300 825,340 825,420 750,460 675,420 675,340"/>
+        <polygon class="lattice-line" points="900,300 975,340 975,420 900,460 825,420 825,340"/>
+        <polygon class="lattice-line" points="1050,300 1125,340 1125,420 1050,460 975,420 975,340"/>
+        <polygon class="lattice-line" points="1200,300 1275,340 1275,420 1200,460 1125,420 1125,340"/>
+        <polygon class="lattice-line" points="1350,300 1425,340 1425,420 1350,460 1275,420 1275,340"/>
+        <polygon class="lattice-line" points="1500,300 1575,340 1575,420 1500,460 1425,420 1425,340"/>
+        <polygon class="lattice-line" points="1650,300 1725,340 1725,420 1650,460 1575,420 1575,340"/>
+        <polygon class="lattice-line" points="1800,300 1875,340 1875,420 1800,460 1725,420 1725,340"/>
+
+        <!-- Row 3 -->
+        <polygon class="lattice-line" points="150,500 225,540 225,620 150,660 75,620 75,540"/>
+        <polygon class="lattice-line" points="300,500 375,540 375,620 300,660 225,620 225,540"/>
+        <polygon class="lattice-line" points="450,500 525,540 525,620 450,660 375,620 375,540"/>
+        <polygon class="lattice-line" points="600,500 675,540 675,620 600,660 525,620 525,540"/>
+        <polygon class="lattice-line" points="750,500 825,540 825,620 750,660 675,620 675,540"/>
+        <polygon class="lattice-line" points="900,500 975,540 975,620 900,660 825,620 825,540"/>
+        <polygon class="lattice-line" points="1050,500 1125,540 1125,620 1050,660 975,620 975,540"/>
+        <polygon class="lattice-line" points="1200,500 1275,540 1275,620 1200,660 1125,620 1125,540"/>
+        <polygon class="lattice-line" points="1350,500 1425,540 1425,620 1350,660 1275,620 1275,540"/>
+        <polygon class="lattice-line" points="1500,500 1575,540 1575,620 1500,660 1425,620 1425,540"/>
+        <polygon class="lattice-line" points="1650,500 1725,540 1725,620 1650,660 1575,620 1575,540"/>
+        <polygon class="lattice-line" points="1800,500 1875,540 1875,620 1800,660 1725,620 1725,540"/>
+
+        <!-- Row 4 -->
+        <polygon class="lattice-line" points="150,700 225,740 225,820 150,860 75,820 75,740"/>
+        <polygon class="lattice-line" points="300,700 375,740 375,820 300,860 225,820 225,740"/>
+        <polygon class="lattice-line" points="450,700 525,740 525,820 450,860 375,820 375,740"/>
+        <polygon class="lattice-line" points="600,700 675,740 675,820 600,860 525,820 525,740"/>
+        <polygon class="lattice-line" points="750,700 825,740 825,820 750,860 675,820 675,740"/>
+        <polygon class="lattice-line" points="900,700 975,740 975,820 900,860 825,820 825,740"/>
+        <polygon class="lattice-line" points="1050,700 1125,740 1125,820 1050,860 975,820 975,740"/>
+        <polygon class="lattice-line" points="1200,700 1275,740 1275,820 1200,860 1125,820 1125,740"/>
+        <polygon class="lattice-line" points="1350,700 1425,740 1425,820 1350,860 1275,820 1275,740"/>
+        <polygon class="lattice-line" points="1500,700 1575,740 1575,820 1500,860 1425,820 1425,740"/>
+        <polygon class="lattice-line" points="1650,700 1725,740 1725,820 1650,860 1575,820 1575,740"/>
+        <polygon class="lattice-line" points="1800,700 1875,740 1875,820 1800,860 1725,820 1725,740"/>
+
+        <!-- Lattice Nodes (connection points) -->
+        <circle class="lattice-node" cx="150" cy="100" r="2"/>
+        <circle class="lattice-node" cx="300" cy="100" r="2"/>
+        <circle class="lattice-node" cx="450" cy="100" r="2"/>
+        <circle class="lattice-node" cx="600" cy="100" r="2"/>
+        <circle class="lattice-node" cx="750" cy="100" r="2"/>
+        <circle class="lattice-node" cx="900" cy="100" r="2"/>
+        <circle class="lattice-node" cx="1050" cy="100" r="2"/>
+        <circle class="lattice-node" cx="1200" cy="100" r="2"/>
+        <circle class="lattice-node" cx="1350" cy="100" r="2"/>
+        <circle class="lattice-node" cx="1500" cy="100" r="2"/>
+        <circle class="lattice-node" cx="1650" cy="100" r="2"/>
+        <circle class="lattice-node" cx="1800" cy="100" r="2"/>
+
+        <circle class="lattice-node" cx="150" cy="300" r="2"/>
+        <circle class="lattice-node" cx="300" cy="300" r="2"/>
+        <circle class="lattice-node" cx="450" cy="300" r="2"/>
+        <circle class="lattice-node" cx="600" cy="300" r="2"/>
+        <circle class="lattice-node" cx="750" cy="300" r="2"/>
+        <circle class="lattice-node" cx="900" cy="300" r="2"/>
+        <circle class="lattice-node" cx="1050" cy="300" r="2"/>
+        <circle class="lattice-node" cx="1200" cy="300" r="2"/>
+        <circle class="lattice-node" cx="1350" cy="300" r="2"/>
+        <circle class="lattice-node" cx="1500" cy="300" r="2"/>
+        <circle class="lattice-node" cx="1650" cy="300" r="2"/>
+        <circle class="lattice-node" cx="1800" cy="300" r="2"/>
+
+        <circle class="lattice-node" cx="150" cy="500" r="2"/>
+        <circle class="lattice-node" cx="300" cy="500" r="2"/>
+        <circle class="lattice-node" cx="450" cy="500" r="2"/>
+        <circle class="lattice-node" cx="600" cy="500" r="2"/>
+        <circle class="lattice-node" cx="750" cy="500" r="2"/>
+        <circle class="lattice-node" cx="900" cy="500" r="2"/>
+        <circle class="lattice-node" cx="1050" cy="500" r="2"/>
+        <circle class="lattice-node" cx="1200" cy="500" r="2"/>
+        <circle class="lattice-node" cx="1350" cy="500" r="2"/>
+        <circle class="lattice-node" cx="1500" cy="500" r="2"/>
+        <circle class="lattice-node" cx="1650" cy="500" r="2"/>
+        <circle class="lattice-node" cx="1800" cy="500" r="2"/>
+
+        <circle class="lattice-node" cx="150" cy="700" r="2"/>
+        <circle class="lattice-node" cx="300" cy="700" r="2"/>
+        <circle class="lattice-node" cx="450" cy="700" r="2"/>
+        <circle class="lattice-node" cx="600" cy="700" r="2"/>
+        <circle class="lattice-node" cx="750" cy="700" r="2"/>
+        <circle class="lattice-node" cx="900" cy="700" r="2"/>
+        <circle class="lattice-node" cx="1050" cy="700" r="2"/>
+        <circle class="lattice-node" cx="1200" cy="700" r="2"/>
+        <circle class="lattice-node" cx="1350" cy="700" r="2"/>
+        <circle class="lattice-node" cx="1500" cy="700" r="2"/>
+        <circle class="lattice-node" cx="1650" cy="700" r="2"/>
+        <circle class="lattice-node" cx="1800" cy="700" r="2"/>
+    </svg>
+
+    <div class="container">
+        <div class="profile-photo">
+            <!-- Replace the src below with your actual photo URL -->
+            <!-- <img src="your-photo.jpg" alt="Adithya"> -->
+            <div class="profile-photo-placeholder">A</div>
+        </div>
+        <h1>Adithya</h1>
+        <p>Welcome to my corner of the internet.</p>
+        <div class="social-links">
+            <!-- GitHub -->
+            <a href="https://github.com/AdithyaBalaji" target="_blank" class="social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="https://x.com/AdithyaBalaji" target="_blank" class="social-link" aria-label="X">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/AdithyaBalaji" target="_blank" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
