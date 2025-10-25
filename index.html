@@ -59,6 +59,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            box-shadow: 0 0 0 8px rgba(58, 58, 58, 0.3);
         }
 
         .profile-photo img {
@@ -73,11 +74,15 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 300;
             margin-bottom: 0.5rem;
             color: #ffffff;
             letter-spacing: -1px;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid rgba(58, 58, 58, 0.5);
+            border-radius: 50px;
+            display: inline-block;
         }
 
         p {
@@ -85,6 +90,11 @@
             line-height: 1.6;
             color: #b0b0b0;
             margin-bottom: 2.5rem;
+        }
+
+        .emoji-icon {
+            color: #6ea8fe;
+            font-style: normal;
         }
 
         .social-links {
@@ -276,12 +286,10 @@
 
     <div class="container">
         <div class="profile-photo">
-            <!-- Replace the src below with your actual photo URL -->
-            <!-- <img src="your-photo.jpg" alt="Adithya"> -->
-            <div class="profile-photo-placeholder">A</div>
+            <img src="https://avatars.githubusercontent.com/u/7944897" alt="Adithya">
         </div>
-        <h1>Adithya</h1>
-        <p>Welcome to my corner of the internet.</p>
+        <h1>Adithya Balaji</h1>
+        <p>⚡ Engineer by training, 💡 innovator by passion</p>
         <div class="social-links">
             <!-- GitHub -->
             <a href="https://github.com/AdithyaBalaji" target="_blank" class="social-link" aria-label="GitHub">
